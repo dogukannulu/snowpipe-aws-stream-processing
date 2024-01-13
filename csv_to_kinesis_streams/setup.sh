@@ -41,9 +41,9 @@ install_python_libraries() {
 execute_python_script() {
     local csv_to_kinesis_streams_script="csv_to_kinesis_streams.py"
     local stream_name="csv-to-kinesis-streams-dogukan-ulu"
-    local interval=5
+    local interval=1
     local max_rows=100
-    local csv_url="https://raw.githubusercontent.com/dogukannulu/send_data_to_aws_services/main/csv_to_kinesis_streams/dirty_store_transactions.csv"
+    local csv_url="https://raw.githubusercontent.com/dogukannulu/snowpipe-aws-stream-processing/main/csv_to_kinesis_streams/dirty_store_transactions.csv"
     
     log_message "Executing the Python script"
     chmod +x "$csv_to_kinesis_streams_script"
